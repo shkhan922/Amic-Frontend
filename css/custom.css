@@ -137,4 +137,6 @@ body {
   color: #FFA502;
 }
 
-.product-new-arrival-grid h1 { text-align: center;}
+.product-new-arrival-grid h1 { text-align: center; color:#FFA502; }
+.text-uppercase {color:#FFA502;}
+.nav-item .nav-link a { text-align: center; color:black; font-weight: bold; }
