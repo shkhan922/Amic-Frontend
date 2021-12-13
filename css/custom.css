@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
- */
+
 body {
   
 }
@@ -140,3 +136,5 @@ body {
 .product-new-arrival-grid h1 { text-align: center; color:#FFA502; }
 .text-uppercase {color:#FFA502;}
 .nav-item .nav-link a { text-align: center; color:black; font-weight: bold; }
+.navbar-light .navbar-nav .nav-link {color:black; font-weight: bold; }
+.input-group input { }
