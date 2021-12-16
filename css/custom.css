@@ -135,6 +135,34 @@ body {
 
 .product-new-arrival-grid h1 { text-align: center; color:#FFA502; }
 .text-uppercase {color:#FFA502;}
-.nav-item .nav-link a { text-align: center; color:black; font-weight: bold; }
-.navbar-light .navbar-nav .nav-link {color:black; font-weight: bold; }
+.nav-item .nav-link a { text-align: left; color:black; font-weight: bold; }
+.navbar-light .navbar-nav .nav-link {color:black; font-weight: bold; text-align: left; font-size: 20px;
+letter-spacing: 0px;
+text-shadow: 0px 3px 6px #00000029;
+opacity: 1; }
+
+.nav-item .nav-link-sidebar { top: 40px;
+left: 1162px;
+width: 22px;
+height: 17px; 
+text-align: center; 
+color:black; 
+font-weight: bold; 
+font-size: 15px; 
+letter-spacing: 0px;
+text-shadow: 0px 3px 6px #00000029;
+opacity: 1; }
+
 .input-group input { }
+
+.srch-box { border: 1px solid #000000;
+border-radius: 15px;
+opacity: 1; 
+top: 33px;
+left: 736px;
+width: 386px;
+height: 45px;
+}
+
+.redincolor { color: red;}
+.whiteincolor { color: grey;}
