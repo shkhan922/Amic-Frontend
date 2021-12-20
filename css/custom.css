@@ -219,3 +219,36 @@ opacity: 1;
 border: 2px solid #FCC35C;
 opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    
+    
+  }
+.search { 
+  position: relative; 
+  margin: 0 auto ;
+  text-align: center;
+}
+.search input { 
+  text-indent: 5px;
+   font-family:  FontAwesome, sans-serif;
+}
+.search .fa-search { 
+  position: absolute;
+  top: 24px;
+  left: 77%;
+  
+}
+input {
+    width: 250px;
+    padding: 5px;
+    margin: 15px;
+    height: 34px;
+    outline:none;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    opacity: 1; 
+}
+
+}
