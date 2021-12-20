@@ -8,7 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
+    <link href="css/login-register.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -26,13 +28,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-4 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">MEN</a>
+                            <a class="nav-link" aria-current="page" href="#">Men</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">WOMEN</a>
+                            <a class="nav-link" href="#">Women</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CUSTOMIZE</a>
+                            <a class="nav-link" href="#">Customize</a>
                         </li>
                         <form>
                 
@@ -64,7 +66,7 @@
                             <a class="nav-link-right" href="#"><i class="fas fa-heart fa-2x redincolor"></i><br>Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-right" href="#"><i class="fas fa-user fa-2x whiteincolor"></i><br>Profile</a>
+                            <a class="nav-link-right" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();"><i class="fas fa-user fa-2x whiteincolor"></i><br>Profile</a>
                         </li>   
                 </div>
                 </div>
@@ -73,6 +75,85 @@
         </div>
         
     </nav>
+    <div class="container">
+        
+    
+    
+        <div class="modal fade login" id="loginModal">
+            <div class="modal-dialog login animated">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <h4 class="modal-title">Log in/Sign up</h4>
+                        <p>To access account and manage order</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                            <div class="content">
+                                
+                                <div class="form loginBox">
+                                    <form method="" action="" accept-charset="UTF-8">
+                                        <input id="mobile_number" class="form-control" type="text" placeholder="Enter Mobile Number" name="mobile">
+                                        
+                                        <input class="btn btn-default btn-login" type="button" value="CONTINUE"
+                                            onclick="loginAjax()">
+                                    </form>
+                                </div>
+                                <br>
+                                
+                                <div class="division">
+                                    <div class="line l"></div>
+                                    <span>OR</span>
+                                    <div class="line r"></div>
+                                </div>
+
+                                <div class="social">
+                                    
+                                    <a id="google_login" class="circle google" href="#">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="#">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+                                </div>
+                               
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                                <div class="form">
+                                    <form method="" html="{:multipart=>true}" data-remote="true" action=""
+                                        accept-charset="UTF-8">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password" class="form-control" type="password" placeholder="Password"
+                                            name="password">
+                                        <input id="password_confirmation" class="form-control" type="password"
+                                            placeholder="Repeat Password" name="password_confirmation">
+                                        <input class="btn btn-default btn-register" type="button" value="Create account"
+                                            name="commit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>New to Amic
+                                <a href="javascript: showRegisterForm();">create an account</a>
+                                ?</span>
+                            <input class="btn btn-default btn-login" type="button" value="Create An Account" onclick="loginAjax()">
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                            <span>Already have an account?</span>
+                            <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </header>
 <section class="main">
 <div class="container-fluid">
@@ -450,5 +531,70 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/9859942612.js" crossorigin="anonymous"></script>
+
+<script>
+    function showRegisterForm() {
+        $('.loginBox').fadeOut('fast', function () {
+            $('.registerBox').fadeIn('fast');
+            $('.login-footer').fadeOut('fast', function () {
+                $('.register-footer').fadeIn('fast');
+            });
+            $('.modal-title').html('Register with');
+        });
+        $('.error').removeClass('alert alert-danger').html('');
+
+    }
+    function showLoginForm() {
+        $('#loginModal .registerBox').fadeOut('fast', function () {
+            $('.loginBox').fadeIn('fast');
+            $('.register-footer').fadeOut('fast', function () {
+                $('.login-footer').fadeIn('fast');
+            });
+
+            $('.modal-title').html('Log In/Sign up');
+        });
+        $('.error').removeClass('alert alert-danger').html('');
+    }
+
+    function openLoginModal() {
+        showLoginForm();
+        setTimeout(function () {
+            $('#loginModal').modal('show');
+        }, 230);
+
+    }
+    function openRegisterModal() {
+        showRegisterForm();
+        setTimeout(function () {
+            $('#loginModal').modal('show');
+        }, 230);
+
+    }
+
+    function loginAjax() {
+        /*   Remove this comments when moving to server
+        $.post( "/login", function( data ) {
+                if(data == 1){
+                    window.location.replace("/home");            
+                } else {
+                     shakeModal(); 
+                }
+            });
+        */
+
+        /*   Simulate error message from the server   */
+        shakeModal();
+    }
+
+    function shakeModal() {
+        $('#loginModal .modal-dialog').addClass('shake');
+        $('.error').addClass('alert alert-danger').html("Invalid email/password combination");
+        $('input[type="password"]').val('');
+        setTimeout(function () {
+            $('#loginModal .modal-dialog').removeClass('shake');
+        }, 1000);
+    }
+
+</script>
 </body>
 </html>
