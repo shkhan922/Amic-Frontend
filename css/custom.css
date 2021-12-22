@@ -1,8 +1,13 @@
 
 body {
-  
+  padding:0;
+  margin:0;
+
 }
 
+a {
+  text-decoration: none;
+}
 /* card */
 .dress-card-img-top {
   width:100%;
@@ -222,9 +227,28 @@ opacity: 1;
 
 @media only screen and (max-width: 600px) {
   body {
-    
-    
+    padding:0;
+    margin:0;
   }
+
+.navbar-light .navbar-nav .nav-link {
+  float: left;
+  color:black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+
+}
+.navbar-nav {
+  display:contents;
+}
+.navbar-light .navbar-nav .nav-item {
+  display: inline-grid;
+}
+.navbar-light .navbar-nav .nav-link-right {
+  display: inline;
+}
 .search { 
   position: relative; 
   margin: 0 auto ;

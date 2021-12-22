@@ -20,10 +20,8 @@
             <a class="navbar-brand" href="#">
                 <img src="images/amiclogo.jpeg" class="img-fluid" alt="" width="150%" height="50%">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <div class="topnav">
             <div class="col-lg-4">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-4 mb-lg-0">
@@ -44,7 +42,11 @@
                         </form>
                 </div>
             </div>
-            
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
              <div class="col-lg-4">
                 
                     
@@ -54,7 +56,7 @@
                     </div>
                 
                
-             </div>
+            </div>
             
                 <div class="col-lg-0">
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -66,19 +68,46 @@
                             <a class="nav-link-right" href="#"><i class="fas fa-heart fa-2x redincolor"></i><br>Wishlist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-right" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();"><i class="fas fa-user fa-2x whiteincolor"></i><br>Profile</a>
-                        </li>   
+                            <a class="nav-link-right"><i class="fas fa-user fa-2x whiteincolor"></i><br>Profile</a>
+                        </li>
+                       
+                  </div>
                 </div>
-                </div>
-             
+            
             
         </div>
         
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Popover in a modal</h5>
+                    <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title"
+                            data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                    <hr>
+                    <h5>Tooltips in a modal</h5>
+                    <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test"
+                            title="Tooltip">that link</a> have tooltips on hover.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Login Modal-->
     <div class="container">
-        
-    
-    
         <div class="modal fade login" id="loginModal">
             <div class="modal-dialog login animated">
                 <div class="modal-content">
@@ -110,10 +139,10 @@
                                 <div class="social">
                                     
                                     <a id="google_login" class="circle google" href="#">
-                                        <i class="fa fa-google-plus fa-fw"></i>
+                                        <i class="fa fa-google"></i>
                                     </a>
                                     <a id="facebook_login" class="circle facebook" href="#">
-                                        <i class="fa fa-facebook fa-fw"></i>
+                                        <i class="fa fa-facebook"></i>
                                     </a>
                                 </div>
                                
