@@ -225,6 +225,70 @@ border: 2px solid #FCC35C;
 opacity: 1;
 }
 
+.dropdown-menu[data-bs-popper]
+{ 
+  top: 100%;
+  left: -457%;
+  width: 372px;
+  height: 357px;
+  margin-top: 0.125rem;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 12px;
+opacity: 1;
+backdrop-filter: blur(33px);
+-webkit-backdrop-filter: blur(33px);
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0rem 0.1rem 1.6rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  margin:10px ​0px 10px -5px;
+}
+.dropdown-divider {
+  border: 1px solid #707070;
+  opacity: 1;
+  margin: 0 31px 0 23px;
+}
+.dropdown-menu h3 
+{
+  padding: 24px;
+text-align: left;
+font: normal normal bold 18px/24px Segoe UI;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.dropdown-menu p 
+{
+  text-align: left;
+  font: normal normal 300 15px/20px Segoe UI;
+  letter-spacing: 0px;
+  color: #646565;
+  opacity: 2;
+  padding-left: 22px;
+  margin-top: -28px;
+}
+.dropdown-menu button
+{
+  color: #FCC35C;
+  background: white;
+border: 1px solid #707070;
+border-radius: 6px;
+opacity: 1;
+margin: 19px 0px 33px 24px;
+}
+
+
+/* Responsive Media queries */
 @media only screen and (max-width: 600px) {
   body {
     padding:0;
