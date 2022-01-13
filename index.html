@@ -190,7 +190,7 @@
                             <div class="line r"></div>
                         </div>
                         <div class="forgot-login-footer">
-                            <input type="button" value="Create your Amic Account" href="javascript: showRegisterForm();">
+                            <button onclick=openRegisterModal()>Create your Amic Account</button> 
                         </div>
                         <div class="forgot register-footer" style="display:none">
                             <span>Already have an account?</span>
@@ -202,6 +202,79 @@
         </div>
     </div>
     
+    <!--Register Modal-->
+    <div class="container">
+        <div class="modal fade register" id="RegisterModal">
+            <div class="modal-dialog login animated">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <h4>Create Account</h4>
+                    
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                            <div class="content">
+                                
+                                <div class="form loginBox">
+                                    <form method="" action="" accept-charset="UTF-8">
+                                        <label for="">Your Name</label><br>
+                                        <input id="mobile_number" type="text"  name="mobile"><br>
+                                        <label for="">Mobile Number</label><br>
+                                        <input id="mobile_number"  type="text"  name="mobile"><br>
+                                        <label for="">Email</label><br>
+                                        <input id="mobile_number"  type="text"  name="mobile"><br>
+                                        <label for="">Password</label><br>
+                                        <input id="mobile_number"  type="text"  name="mobile"><br>
+                                        <label for="">Confirm Password</label><br>
+                                        <input id="mobile_number"  type="text"  name="mobile">
+                                        <p>Passwords must be at least 6 characters.</p>
+                                        <br><br>
+                                        <p>We will send you a text to verify your phone.</p> 
+                                        
+                                        <input class="btn btn-default btn-login" type="button" value="CONTINUE"
+                                            onclick="loginAjax()">
+                                        <a href="#">Log in</a>
+                                    </form>
+                                </div>
+                                <br>
+                                
+                                
+                               
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                                <div class="form">
+                                    <form method="" html="{:multipart=>true}" data-remote="true" action=""
+                                        accept-charset="UTF-8">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password" class="form-control" type="password" placeholder="Password"
+                                            name="password">
+                                        <input id="password_confirmation" class="form-control" type="password"
+                                            placeholder="Repeat Password" name="password_confirmation">
+                                        <input class="btn btn-default btn-register" type="button" value="Create account"
+                                            name="commit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="division">
+                            
+                        </div>
+                        
+                        <div class="forgot register-footer" style="display:none">
+                            <span>Already have an account?</span>
+                            <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 <section class="main">
 <div class="container-fluid">
@@ -612,9 +685,12 @@
 
     }
     function openRegisterModal() {
-        showRegisterForm();
         setTimeout(function () {
-            $('#loginModal').modal('show');
+            $('#loginModal').modal('hide');
+        }, 230);
+
+        setTimeout(function () {
+            $('#RegisterModal').modal('show');
         }, 230);
 
     }
