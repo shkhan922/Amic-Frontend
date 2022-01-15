@@ -206,7 +206,7 @@ height: 45px;
 .search .fa-search { 
   position: absolute;
   top: 24px;
-  left: 94%;
+  left: 100%;
   font-size: 21px;
 }
 input {

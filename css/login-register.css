@@ -1,343 +1,445 @@
-
-
 @charset "UTF-8";
 
 .animated {
   -webkit-animation-duration: 1s;
-	   -moz-animation-duration: 1s;
-	     -o-animation-duration: 1s;
-	        animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	   -moz-animation-fill-mode: both;
-	     -o-animation-fill-mode: both;
-	        animation-fill-mode: both;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .animated.hinges {
-	-webkit-animation-duration: 2s;
-	   -moz-animation-duration: 2s;
-	     -o-animation-duration: 2s;
-	        animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 .animated.slow {
-	-webkit-animation-duration: 3s;
-	   -moz-animation-duration: 3s;
-	     -o-animation-duration: 3s;
-	        animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 .animated.snail {
-	-webkit-animation-duration: 4s;
-	   -moz-animation-duration: 4s;
-	     -o-animation-duration: 4s;
-	        animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes shake {
-	0%, 100% {-webkit-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+  }
 }
 
 @-moz-keyframes shake {
-	0%, 100% {-moz-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+  0%,
+  100% {
+    -moz-transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -moz-transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -moz-transform: translateX(10px);
+  }
 }
 
 @-o-keyframes shake {
-	0%, 100% {-o-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+  0%,
+  100% {
+    -o-transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -o-transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -o-transform: translateX(10px);
+  }
 }
 
 @keyframes shake {
-	0%, 100% {transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {transform: translateX(10px);}
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
+.modal-register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    width: 118%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
 .shake {
-	-webkit-animation-name: shake;
-	-moz-animation-name: shake;
-	-o-animation-name: shake;
-	animation-name: shake;
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
 }
-
-.login .modal-dialog{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
-border: 1px solid #707070;
-opacity: 1;
-backdrop-filter: blur(30px);
--webkit-backdrop-filter: blur(30px);
-    width: 500px;
+.modal-content-create {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 71%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
 }
-.login .modal-footer{
-    border-top: 0;
-    margin-top: 0px;
-    padding: 20px 20px 20px;
+.login .modal-dialog {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
+  border: 1px solid #707070;
+  opacity: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  width: 500px;
+}
+.login .modal-footer {
+  border-top: 0;
+  margin-top: 0px;
+  padding: 20px 20px 20px;
 }
 .login .modal-header {
-    display: block;
-    text-align: center;
-    border: 0 none;
-    color: #000000;
-    padding: 15px 15px 15px;
-/*     padding: 11px 15px; */
+  display: block;
+  text-align: center;
+  border: 0 none;
+  color: #000000;
+  padding: 15px 15px 15px;
+  /*     padding: 11px 15px; */
 }
 .login .modal-header h4 {
-    margin-bottom: 0;
-    line-height: 1.5;
-    font-size: 1rem;
-    font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: bold;
 }
-.login .modal-body{
-/*     background-color: #eeeeee; */
+.login .modal-body {
+  /*     background-color: #eeeeee; */
 }
 .login .division {
-    float: none;
-    margin: 0 auto 18px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    width: 100%;
+  float: none;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 .login .division .line {
-    border-top: 1px solid #DFDFDF;
-    position: absolute;
-    top: 10px;
-    width: 34%;
+  border-top: 1px solid #dfdfdf;
+  position: absolute;
+  top: 10px;
+  width: 34%;
 }
 .login .division .line.l {
-    left: 0;
+  left: 0;
 }
 .login .division .line.r {
-    right: 0;
+  right: 0;
 }
 .login .division span {
-    text-align: left;
-font: normal normal normal 15px/20px Segoe UI;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-font-weight: bold;
-    
+  text-align: left;
+  font: normal normal normal 15px/20px Segoe UI;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-weight: bold;
 }
 .login .box .social {
-    float: none;
-    margin: 0 auto 30px;
-    text-align: center;
+  float: none;
+  margin: 0 auto 30px;
+  text-align: center;
 }
 
-.login .social .circle{
-    background-color: #EEEEEE;
-    color: #FFFFFF;
-    border-radius: 100px;
-    display: inline-block;
-    margin: 0 17px;
-    padding: 15px;
+.login .social .circle {
+  background-color: #eeeeee;
+  color: #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 0 17px;
+  padding: 15px;
 }
-.login .social .circle .fa{
-    font-size: 20px;
+.login .social .circle .fa {
+  font-size: 20px;
 }
-.login .social .facebook{
-    background-color: #7890e0;
-    color: #FFFFFF;
+.login .social .facebook {
+  background-color: #7890e0;
+  color: #ffffff;
 }
-.login .social .google{
-    background-color: #F74933;
+.login .social .google {
+  background-color: #f74933;
 }
-.login .social .github{
-    background-color: #403A3A;
+.login .social .github {
+  background-color: #403a3a;
 }
-.login .facebook:hover{
-    background-color: #6E83CD;
+.login .facebook:hover {
+  background-color: #6e83cd;
 }
-.login .google:hover{
-    background-color: #FF7566;
+.login .google:hover {
+  background-color: #ff7566;
 }
-.login .github:hover{
-    background-color: #4D4D4d;;
+.login .github:hover {
+  background-color: #4d4d4d;
 }
 .login .forgot {
-    color: #797979;
-    margin-left: 0;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
+  color: #797979;
+  margin-left: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
 }
-.login .btn-login, .registerBox .btn-register{
-    line-height: 1.5;
-    
-    
-    
-    color: #FFFFFF;
-    display: block;
-    margin: 0 auto;
-    padding: 5px 50px;
-    text-transform: uppercase;
-    width: 60%;
-    background: #FFA502 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-border-radius: 8px;
-opacity: 1;
+.login .btn-login,
+.registerBox .btn-register {
+  line-height: 1.5;
+
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 50px;
+  text-transform: uppercase;
+  width: 60%;
+  background: #ffa502 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  opacity: 1;
 }
-.login .btn-login:hover, .registerBox .btn-register:hover{
-    background-color: #FFA502;
-    color: #FFFFFF;
+.login .btn-login:hover,
+.registerBox .btn-register:hover {
+  background-color: #ffa502;
+  color: #ffffff;
 }
-.login .form-control{
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.09);
-    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
-    color: #FFFFFF;
+.login .form-control {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.09);
+  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+  color: #ffffff;
 }
-.login .form-control:hover{
-    background-color: rgba(0,0,0,.16);
+.login .form-control:hover {
+  background-color: rgba(0, 0, 0, 0.16);
 }
-.login .form-control:focus{
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
-    background-color: rgba(0,0,0,0.23);
-    color: #FFFFFF;
+.login .form-control:focus {
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+  background-color: rgba(0, 0, 0, 0.23);
+  color: #ffffff;
 }
-.login .box .form input[type="text"], .login .box .form input[type="password"] {
-    
-    background-color: white;
-    
-    color: #333333;
-    font-size: 16px;
-    height: 42px;
-    margin:0.5rem 0 0.7rem 5.7rem;
-    padding: 15px 50px;
-    width: 60%;
-    border: 1px solid #707070;
-    border-radius: 8px;
-    opacity: 1;
+.login .box .form input,
+.login .box .form input{
+  background-color: white;
+
+  color: #333333;
+  font-size: 16px;
+  height: 42px;
+  margin: 0.5rem 0 0.7rem 5.7rem;
+  padding: 15px 50px;
+  width: 60%;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  opacity: 1;
 }
 .form loginBox input {
-    box-shadow: 0px 3px 6px #00000029;
-border: 1px solid #707070;
-border-radius: 4px;
-opacity: 1;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
 }
 .forgot-login-footer button {
-    text-align: left;
-    font: normal normal normal 16px/19px Helvetica;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    padding: 2px 5px 2px 7px;
-    margin: 6px 110px 3px 10px;
-    width: 216px;
-    height: 33px;
-    background: #E8E8E8 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #707070;
-    border-radius: 4px;
-    opacity: 1;
+  text-align: left;
+  font: normal normal normal 16px/19px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding: 2px 5px 2px 7px;
+  margin: 6px 110px 3px 10px;
+  width: 216px;
+  height: 33px;
+  background: #e8e8e8 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
 }
 .register .modal-header {
-    display: block;
-    text-align: center;
-    border: 0 none;
-    color: #000000;
-    padding: 15px 15px 15px;
-/*     padding: 11px 15px; */
+  display: block;
+  text-align: center;
+  border: 0 none;
+  color: #000000;
+  padding: 15px 15px 15px;
+  /*     padding: 11px 15px; */
 }
 .register .modal-header h4 {
-    text-align: left;
-font: normal normal bold 32px/38px Helvetica;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-    font-weight: bold;
+  text-align: left;
+  font: normal normal bold 32px/38px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-weight: bold;
+  
 }
 .register .modal-header label {
-    text-align: left;
-font: normal normal bold 15px/20px Segoe UI;
-letter-spacing: 0px;
-color: #707070;
-opacity: 1;
+  text-align: left;
+  font: normal normal bold 15px/20px Segoe UI;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
 }
 .register .modal-header input {
-    box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #707070;
-    border-radius: 4px;
-    opacity: 1;
-    
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
 }
-.register .box .form input[type="text"]
-{
-    box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #707070;
-    border-radius: 4px;
-    opacity: 1;
-    margin: 2px 3px 20px 1px;
-    width: -webkit-fill-available;
+.register .box .form input {
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
+  margin: 0px 0px 7px 0px;
+  width: -webkit-fill-available;
 }
-.register .btn-login, .registerBox .btn-register
-{
+.register .btn-login,
+.registerBox .btn-register {
+  line-height: 1.5;
+  color: #ffffff;
+  display: block;
+  margin: 9px 8px 7px 5px;
+  padding: 5px 50px;
+  text-transform: uppercase;
+  width: 97%;
+  background: #ffa502 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  opacity: 1;
+}
+.modal-btn-login{
     line-height: 1.5;
-    color: #FFFFFF;
+    color: #ffffff;
     display: block;
-    margin:9px 8px 7px 5px;
-    padding: 5px 50px;
+    margin: 12px 8px 5px 92px;
+    padding: 7px 43px 7px 32px;
     text-transform: uppercase;
-    width: 97%;
-    background: #FFA502 0% 0% no-repeat padding-box;
+    width: 60%;
+    background: #ffa502 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     border-radius: 8px;
     opacity: 1;
-    
+}
 
+
+.modal-btn {
+    line-height: 1.5;
+  color: #ffffff;
+  display: block;
+  margin: 9px 8px 7px 5px;
+  padding: 5px 50px;
+  text-transform: uppercase;
+  width: 97%;
+  background: #ffa502 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  opacity: 1;
 }
 .register .box .form p {
-    text-align: left;
-font: normal normal bold 12px/15px Segoe UI;
-letter-spacing: 0px;
-color: #707070;
-opacity: 1;
-padding: 0px 3px 8px 7px;
-margin: -2px 2px 2px 0px;
+  text-align: left;
+  font: normal normal bold 12px/15px Segoe UI;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  padding: 0px 3px 8px 7px;
+  margin: -2px 2px 2px 0px;
 }
 .register .box .form a {
-    text-align: left;
-font: normal normal bold 20px/27px Segoe UI;
-letter-spacing: 0px;
-color: #0099FF;
-opacity: 1;
-padding: 0 0 0 201px;
+  text-align: left;
+  font: normal normal bold 20px/27px Segoe UI;
+  letter-spacing: 0px;
+  color: #0099ff;
+  opacity: 1;
+  padding: 0 0 0 136px;
 }
-@media (max-width:400px){
-    .login .modal-dialog{
-        width: 100%;
-    }
+@media (max-width: 400px) {
+  .login .modal-dialog {
+    width: 100%;
+  }
 }
 
-.big-login, .big-register{
-    background-color: #00bbff;
-    color: #FFFFFF;
-    border-radius: 7px;
-    border-width: 2px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 200;
-    padding: 16px 60px;
-    text-transform: uppercase;
-    transition: all 0.3s ease 0s;
+.big-login,
+.big-register {
+  background-color: #00bbff;
+  color: #ffffff;
+  border-radius: 7px;
+  border-width: 2px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+  padding: 16px 60px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
 }
-.big-login:hover{
-    background-color: #00A4E4;
-    color: #FFFFFF;
+.big-login:hover {
+  background-color: #00a4e4;
+  color: #ffffff;
 }
-.big-register{
-    background-color: rgba(0,0,0,.0);
-    color: #00bbff;
-    border-color: #00bbff;
+.big-register {
+  background-color: rgba(0, 0, 0, 0);
+  color: #00bbff;
+  border-color: #00bbff;
 }
-.big-register:hover{
-    border-color: #00A4E4;
-    color:  #00A4E4;
+.big-register:hover {
+  border-color: #00a4e4;
+  color: #00a4e4;
 }

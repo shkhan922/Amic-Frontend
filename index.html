@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="images/amiclogo.jpeg" class="img-fluid" alt="" width="150%" height="50%">
             </a>
             
@@ -63,7 +63,7 @@
                         
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link-right" href="#"><i class="fas fa-heart fa-2x redincolor"></i><br>Wishlist</a>
+                            <a class="nav-link-right" href="/wishlist.html"><i class="fas fa-heart fa-2x redincolor"></i><br>Wishlist</a>
                         </li>
                         <li class="nav-item dropdown">
                             <!--<a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Hover me  </a>-->
@@ -131,11 +131,10 @@
                             <div class="content">
                                 
                                 <div class="form loginBox">
-                                    <form method="" action="" accept-charset="UTF-8">
+                                    <form method="post" action="" accept-charset="UTF-8">
                                         <input id="mobile_number" class="form-control" type="text" placeholder="Enter Mobile Number" name="mobile">
                                         
-                                        <input class="btn btn-default btn-login" type="button" value="CONTINUE"
-                                            onclick="loginAjax()">
+                                        <button type="submit" class="modal-btn-login">CONTINUE </button>
                                     </form>
                                 </div>
                                 <br>
@@ -204,9 +203,9 @@
     
     <!--Register Modal-->
     <div class="container">
-        <div class="modal fade register" id="RegisterModal">
+        <div class="modal-register fade register" id="RegisterModal">
             <div class="modal-dialog login animated">
-                <div class="modal-content">
+                <div class="modal-content-create">
                     <div class="modal-header">
                         
                         <h4>Create Account</h4>
@@ -221,19 +220,18 @@
                                         <label for="">Your Name</label><br>
                                         <input id="mobile_number" type="text"  name="mobile"><br>
                                         <label for="">Mobile Number</label><br>
-                                        <input id="mobile_number"  type="text"  name="mobile"><br>
+                                        <input id="mobile_number"  type="phone"  name="mobile"><br>
                                         <label for="">Email</label><br>
-                                        <input id="mobile_number"  type="text"  name="mobile"><br>
+                                        <input id="mobile_number"  type="email"  name="mobile"><br>
                                         <label for="">Password</label><br>
-                                        <input id="mobile_number"  type="text"  name="mobile"><br>
+                                        <input id="mobile_number"  type="password"  name="mobile"><br>
                                         <label for="">Confirm Password</label><br>
-                                        <input id="mobile_number"  type="text"  name="mobile">
+                                        <input id="mobile_number"  type="password"  name="mobile">
                                         <p>Passwords must be at least 6 characters.</p>
                                         <br><br>
                                         <p>We will send you a text to verify your phone.</p> 
                                         
-                                        <input class="btn btn-default btn-login" type="button" value="CONTINUE"
-                                            onclick="loginAjax()">
+                                        <button class="modal-btn" value="CONTINUE" onclick="loginAjax()"> CONTINUE </button>
                                         <a href="#">Log in</a>
                                     </form>
                                 </div>
